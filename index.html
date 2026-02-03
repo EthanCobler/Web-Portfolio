@@ -1,11 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Personal Site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethan Cobler | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Top bar -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Ethan Cobler</h1>
+        <p>Computer Science Major • FinTech Minor</p>
+      </div>
+
+      <div class="header-actions">
+        <nav class="nav">
+          <a href="#top" data-nav="top">Home</a>
+          <a href="#projects" data-nav="projects">Projects</a>
+          <a href="#experience" data-nav="experience">Experience</a>
+          <a href="#skills" data-nav="skills">Skills</a>
+          <a href="#hobbies" data-nav="hobbies">Hobbies</a>
+          <a href="#connections" data-nav="connections">Connect</a>
+        </nav>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <span class="toggle-text">Dark</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="top" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h2>Building projects that are fun to me!</h2>
+          <p>
+            I’m learning how to code and publish apps and documenting everything here.
+            Expect frequent updates as I get things going.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">See Projects</a>
+            <a class="button ghost" href="#connections">Connect</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <p class="small-title">Currently learning</p>
+          <ul>
+            <li>HTML structure</li>
+            <li>CSS layout + responsive design</li>
+            <li>JavaScript basics</li>
+            <li>C++</li>
+          </ul>
+          <p class="note">Last updated: <span id="today"></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Projects</h2>
+          <p>Projects I’m building for myself and in class.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="project-image">
+              <span>Project Preview</span>
+            </div>
+            <h3>Spreadsheet WebApp</h3>
+            <p class="muted">
+              Created a Spreadsheet that allows the user to input data and solve formulas in cells.
+              Learned how to bring different stages of development together as well as how to incorporate
+              a larger codebase into HTML.
+            </p>
+            <div class="links">
+              <a href="#" target="_blank" rel="noopener">Live</a>
+              <a href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <span class="tag">HTML • CSS</span>
+          </article>
+
+          <article class="card">
+            <div class="project-image">
+              <span>Project Preview</span>
+            </div>
+            <h3>Server Snake Game</h3>
+            <p class="muted">
+              Collaborated with a partner to create a server based snake game.
+              This game connects the user to a server with other players as well as multiple AI bots.
+              I learned how to implement a server and handle different states for the user.
+            </p>
+            <div class="links">
+              <a href="#" target="_blank" rel="noopener">Live</a>
+              <a href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <span class="tag">Coming soon</span>
+          </article>
+
+          <article class="card">
+            <div class="project-image">
+              <span>Project Preview</span>
+            </div>
+            <h3>Fun Fact Generator</h3>
+            <p class="muted">
+              Currently making a Fun Fact App.
+              This app allows the user to periodically recieve fun facts of any subject they want.
+              I plan to learn how to fully publish an app as well as polish my HTML, CSS, and JavaScript.
+            </p>
+            <div class="links">
+              <a href="#" target="_blank" rel="noopener">Live</a>
+              <a href="#" target="_blank" rel="noopener">GitHub</a>
+            </div>
+            <span class="tag">Coming soon</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section soft">
+      <div class="container">
+        <div class="section-head">
+          <h2>Experience</h2>
+          <p>Work, education, and what I’m developing right now.</p>
+        </div>
+
+        <div class="stack">
+          <div class="item">
+            <div class="item-top">
+              <h3>Computer Science Major</h3>
+              <span class="time">Current</span>
+            </div>
+            <p class="muted">Taking classes learning about everything that comes with Computer Science @ the University of Utah</p>
+          </div>
+
+          <div class="item">
+            <div class="item-top">
+              <h3>Trader Joe's / Crew Member</h3>
+              <span class="time">2024–Current</span>
+            </div>
+            <p class="muted">Highlights:</p>
+            <ul class="muted-list">
+              <li>Work in a fast paced environment</li>
+              <li>Foster an enjoyable customer experience</li>
+            </ul>
+          </div>
+
+          <div class="item">
+            <div class="item-top">
+              <h3>Personal Projects</h3>
+              <span class="time">Ongoing</span>
+            </div>
+            <p class="muted">Learning Git/GitHub and building extra practice projects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p>Tools and skills I’m building as I learn.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="card">
+            <h3>Software Development</h3>
+            <p class="muted">Building clean layouts and responsive pages.</p>
+            <div class="skill-tags">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">C++</span>
+              <span class="chip">Python</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Tools</h3>
+            <p class="muted">How I build, test, and share my work.</p>
+            <div class="skill-tags">
+              <span class="chip">VS Code</span>
+              <span class="chip">Git</span>
+              <span class="chip">GitHub</span>
+              <span class="chip">Docker</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Learning Next</h3>
+            <p class="muted">What I’m planning to add soon.</p>
+            <div class="skill-tags">
+              <span class="chip">APIs</span>
+              <span class="chip">Publishing</span>
+              <span class="chip">Databases</span>
+              <span class="chip">Accessibility</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobbies -->
+    <section id="hobbies" class="section soft">
+      <div class="container">
+        <div class="section-head">
+          <h2>Hobbies</h2>
+          <p>What I’m into outside of building websites.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>The Fun Hobby</h3>
+            <p class="muted">Going on quick short trips with my girlfriend.</p>
+          </article>
+
+          <article class="card">
+            <h3>The Retired Soccer Player</h3>
+            <p class="muted">Playing and watching soccer with my friends.</p>
+          </article>
+
+          <article class="card">
+            <h3>The Want To Learn</h3>
+            <p class="muted">Learning languages, currently Japanese and French.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect -->
+    <section id="connections" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Connect</h2>
+          <p>Where to find me online.</p>
+        </div>
+
+        <div class="grid small-grid">
+          <a class="card link-card" href="#" target="_blank" rel="noopener">
+            <h3>GitHub</h3>
+            <p class="muted">Code + repos</p>
+          </a>
+
+          <a class="card link-card" href="#" target="_blank" rel="noopener">
+            <h3>LinkedIn</h3>
+            <p class="muted">Professional profile</p>
+          </a>
+
+          <a class="card link-card" href="mailto:youremail@example.com">
+            <h3>Email</h3>
+            <p class="muted">ethancobler@gmail.com</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Ethan Cobler</p>
+      <p class="muted">Built with simple HTML + CSS.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Footer + hero dates
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("today").textContent = new Date().toLocaleDateString();
+
+    // Active section highlight
+    const navLinks = Array.from(document.querySelectorAll(".nav a[data-nav]"));
+    const topSection = document.getElementById("top");
+
+    const sections = navLinks
+      .map((a) => document.getElementById(a.dataset.nav))
+      .filter((el) => el && el.id !== "top");
+
+    function setActive(id) {
+      navLinks.forEach((a) => {
+        const isActive = a.dataset.nav === id;
+        a.classList.toggle("active", isActive);
+        if (isActive) a.setAttribute("aria-current", "page");
+        else a.removeAttribute("aria-current");
+      });
+    }
+
+    function clearActive() {
+      navLinks.forEach((a) => {
+        a.classList.remove("active");
+        a.removeAttribute("aria-current");
+      });
+    }
+
+    // Click behavior: Home highlights briefly, then clears
+    navLinks.forEach((a) => {
+      a.addEventListener("click", () => {
+        const id = a.dataset.nav;
+
+        if (id === "top") {
+          setActive("top");
+          window.setTimeout(() => clearActive(), 650);
+          return;
+        }
+
+        setActive(id);
+      });
+    });
+
+    // Stable active-section tracking (prevents “wrong tab” flashes while scrolling)
+const sectionRatios = new Map();
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    // Update ratios for sections that changed
+    entries.forEach((entry) => {
+      sectionRatios.set(entry.target.id, entry.isIntersecting ? entry.intersectionRatio : 0);
+    });
+
+    // Pick the section with the highest ratio overall
+    let bestId = null;
+    let bestRatio = 0;
+
+    sectionRatios.forEach((ratio, id) => {
+      if (ratio > bestRatio) {
+        bestRatio = ratio;
+        bestId = id;
+      }
+    });
+
+    // Only set active when we have a clear winner
+    if (bestId && bestRatio >= 0.35) {
+      setActive(bestId);
+    }
+  },
+  { root: null, threshold: [0.2, 0.35, 0.5, 0.65, 0.8] }
+);
+
+    sections.forEach((s) => observer.observe(s));
+
+    // When the hero/top section is in view, clear the active nav
+    if (topSection) {
+      const topObserver = new IntersectionObserver(
+        (entries) => {
+          const entry = entries[0];
+          if (entry && entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+            clearActive();
+          }
+        },
+        { threshold: [0.25, 0.4, 0.55, 0.7] }
+      );
+
+      topObserver.observe(topSection);
+    }
+
+    clearActive();
+
+    // Dark mode toggle (fun + clean)
+    const root = document.documentElement;
+    const themeToggle = document.getElementById("themeToggle");
+
+    function applyTheme(theme) {
+      const isDark = theme === "dark";
+      root.setAttribute("data-theme", isDark ? "dark" : "light");
+      themeToggle.setAttribute("aria-pressed", String(isDark));
+      themeToggle.querySelector(".toggle-text").textContent = isDark ? "Light" : "Dark";
+    }
+
+    const saved = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initial = saved || (prefersDark ? "dark" : "light");
+    applyTheme(initial);
+
+    themeToggle.addEventListener("click", () => {
+      const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      const next = current === "dark" ? "light" : "dark";
+      localStorage.setItem("theme", next);
+      applyTheme(next);
+    });
+  </script>
 </body>
 </html>
